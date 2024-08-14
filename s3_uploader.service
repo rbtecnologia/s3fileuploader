@@ -1,0 +1,14 @@
+[Unit]
+Description=S3 Uploader Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/s3_monitor.py
+WorkingDirectory=/etc/s3_uploader
+User=your_user
+Group=your_group
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

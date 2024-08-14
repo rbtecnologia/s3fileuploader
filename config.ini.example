@@ -1,0 +1,9 @@
+[settings]
+running_interval = 300  # Interval to check for new files (in seconds)
+cleanup_interval = 604800  # Interval for cleaning up the directory (in seconds, 7 days by default)
+log_path = ./log/s3_uploader.log  # Path to the log file
+uploaded_files_db = uploaded_files.txt  # Path to the uploaded files database
+
+[aws]
+bucket_name = your-s3-bucket-name
+directory_to_watch = /path/to/your/watch/folder
